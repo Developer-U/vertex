@@ -7,3 +7,5 @@
 * Переключение режимов "зима-лето"<br>
 * Применение мер по ускорению загрузки сайта<br>
 <hr>
+
+[![Vertex.png](https://i.postimg.cc/3Nt98yVV/Vertex.png)](https://postimg.cc/Pv81KqtQ)
