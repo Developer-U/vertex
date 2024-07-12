@@ -1,23 +1,9 @@
-<?php ?>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">  
-    <link rel="shortcut icon" href="/wp-content/themes/vertex/img/favicon.ico">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=68f9a0ea-6fba-4a6e-9f0a-5a716b0b30d5&lang=ru_RU" type="text/javascript">
-    </script>
-    
-    <title>Vertex - отель в Красной Поляне</title>
-
-    <?php wp_head(); ?>
-</head>
-
-<body>
-<?php ?>
+<?php
+/*
+ * Template Name: Бронирование
+ */
+get_header( );
+?>
 
 <section class="booking">
     <div class="container">

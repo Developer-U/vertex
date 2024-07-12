@@ -1,7 +1,15 @@
-$(document).ready(function() { 
+jQuery(function($) {
   // Скролл меню в хедере 
- 
-   $(window).scroll(function(){
+  $('[data-fancybox]').fancybox({
+    protect: true,
+    hash : false,
+    loop: true,
+    arrows: true,
+    backFocus: true,
+    clickSlide: "close"
+  });
+
+  $(window).scroll(function(){
      if($(this).scrollTop()>=200) {
        $('.header').css({      
          'background-color':'rgba(0,0,0, .7)'                 
@@ -228,58 +236,76 @@ window.addEventListener('DOMContentLoaded', function(){
 
   // Слайдер в блоке Hero
 
-  const swiper = new Swiper('.swiper-hero', {
+  const swiper = new Swiper('.hero-slider_ru_RU', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
-    speed: 700,   
-              
-    
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-      type: 'progressbar'
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-        
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-
-    // Управлять слайдером с клавиатуры
+    speed: 700,  
+  
     keyboard: {
-        //включаем
         enabled: true,
-        //управление клавишами pageUp/pageDown
         pageUpDown: true,
     },
-
     freeMode: {
         enabled: true,
     },
-
     autoplay: {
         delay: 4000,            
         waitForTransition: true,
     },    
   });
 
+  const swiper_en = new Swiper('.hero-slider_en_US', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 700,  
+  
+    keyboard: {
+        enabled: true,
+        pageUpDown: true,
+    },
+    freeMode: {
+        enabled: true,
+    },
+    autoplay: {
+        delay: 4000,            
+        waitForTransition: true,
+    },    
+  }); 
+  
 
-  // Слайдер в блоке Hero
 
-  const gallerySlider = new Swiper('.gallery__slider', {
+  // Слайдер в блоке Gallery
+
+  const gallerySliderRu = new Swiper('.gallery__slider_ru_RU', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    backFocus: false,
+    slidesPerView: 2,
+    spaceBetween: 4, 
+   
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },  
+    
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+      }
+    }
+  });
+
+ 
+
+  const gallerySliderEn = new Swiper('.gallery__slider_en_US', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -634,49 +660,16 @@ window.addEventListener('DOMContentLoaded', function(){
   new Swiper('.vip__slider', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     slidesPerView: 1,
     spaceBetween: 20,
-    speed: 700,
-              
-    
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-      type: 'progressbar'
-    },
+    speed: 700,    
 
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2',
-    },
-
-        
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-
-    // Управлять слайдером с клавиатуры
-    keyboard: {
-        //включаем
-        enabled: true,
-        //управление клавишами pageUp/pageDown
-        pageUpDown: true,
-    },
-
-    freeMode: {
-        enabled: true,
-    },
-
-    autoplay: {
-        delay: 4000,            
-        waitForTransition: true,
-    },    
+    }, 
   });
 
   // Слайдер в блоке Transfer

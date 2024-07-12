@@ -16,11 +16,7 @@
 
                     <li class="menu-list__item">
                         <a href="#appart" class="menu-list__link js-slideTo">rooms</a>
-                    </li>
-
-                    <li class="menu-list__item">
-                        <a href="#villa" class="menu-list__link js-slideTo">villa</a>
-                    </li>
+                    </li>                   
 
                     <li class="menu-list__item">
                         <a href="#spa" class="menu-list__link js-slideTo">spa</a>
@@ -29,35 +25,23 @@
                     <li class="menu-list__item">
                         <a href="#vip-spa" class="menu-list__link js-slideTo">vip spa</a>
                     </li>
+                </ul>
 
+                <ul class="menu-list footer__list col-lg-3 col-sm-4 col-12">
                     <li class="menu-list__item">
                         <a href="#restraunt" class="menu-list__link js-slideTo">restraunts</a>
                     </li>
 
                     <li class="menu-list__item">
-                        <a href="#reviews" class="menu-list__link js-slideTo">reviews</a>
-                    </li>
-
-                    <li class="menu-list__item">
                         <a href="#contacts" class="menu-list__link js-slideTo">contacts</a>
                     </li>
-                </ul>
 
-                <ul class="menu-list footer__list col-lg-3 col-sm-4 col-12">
                     <li class="menu-list__item">
                         <a href="#pool" class="menu-list__link js-slideTo">swimming pool</a>
-                    </li>
-
-                    <li class="menu-list__item">
-                        <a href="#transfer" class="menu-list__link js-slideTo">transfer</a>
-                    </li>
-
-                    <li class="menu-list__item">
-                        <a href="#ski" class="menu-list__link js-slideTo">ski services</a>
-                    </li>                   
+                    </li>   
                 </ul>
 
-                <ul class="footer__social col-lg-3 col-12 row justify-content-between">
+                <ul class="footer__social col-lg-3 col-12 row justify-content-end">
                     <!-- <li class="social__item col-auto">
                         <a href="#" class="social__link insta"></a>
                     </li> -->
@@ -126,19 +110,19 @@
      <!--Попап Прайс-->
     <div class="vip-spa__container">
         <button type="submit" class="vip-spa__close js-priceClose"></button>
-        <div class="swiper swiper-price container vip-spa__slider">
+        <div class="swiper container vip__slider">
             <!-- враппер -->
             <div class="swiper-wrapper">
 
-                <?php if( have_rows('add_price') ): ?>
-                <?php while( have_rows('add_price') ): the_row();
-                    $image = get_sub_field('new_price');
+                <?php if( have_rows('add_price_en') ): ?>
+                <?php while( have_rows('add_price_en') ): the_row();
+                    $image_en = get_sub_field('new_price_en');
                 ?>
 
                 <!-- слайды -->
                 <div class="swiper-slide swiper-vip__slide">
                     <figure class="swiper-price__image">
-                        <img src="<?= $image; ?>" class="swiper-price__img">
+                        <img src="<?php echo $image_en['url']; ?>" alt="<?php echo $image_en['alt']; ?>" class="swiper-price__img">
                     </figure>
                 </div>
 
@@ -172,11 +156,7 @@
 
                     <li class="menu-list__item">
                         <a href="#appart" class="menu-list__link js-slideTo">номера</a>
-                    </li>
-
-                    <li class="menu-list__item">
-                        <a href="#villa" class="menu-list__link js-slideTo">вилла</a>
-                    </li>
+                    </li>                   
 
                     <li class="menu-list__item">
                         <a href="#spa" class="menu-list__link js-slideTo">spa</a>
@@ -185,35 +165,23 @@
                     <li class="menu-list__item">
                         <a href="#vip-spa" class="menu-list__link js-slideTo">vip spa</a>
                     </li>
+                </ul>
 
+                <ul class="menu-list footer__list col-lg-3 col-sm-4 col-12">
                     <li class="menu-list__item">
                         <a href="#restraunt" class="menu-list__link js-slideTo">ресторан</a>
                     </li>
 
                     <li class="menu-list__item">
-                        <a href="#reviews" class="menu-list__link js-slideTo">отзывы</a>
-                    </li>
-
-                    <li class="menu-list__item">
                         <a href="#contacts" class="menu-list__link js-slideTo">контакты</a>
                     </li>
-                </ul>
 
-                <ul class="menu-list footer__list col-lg-3 col-sm-4 col-12">
                     <li class="menu-list__item">
                         <a href="#pool" class="menu-list__link js-slideTo">бассейн</a>
-                    </li>
-
-                    <li class="menu-list__item">
-                        <a href="#transfer" class="menu-list__link js-slideTo">трансфер</a>
-                    </li>
-
-                    <li class="menu-list__item">
-                        <a href="#ski" class="menu-list__link js-slideTo">горнолыжные услуги</a>
-                    </li>                   
+                    </li>   
                 </ul>
 
-                <ul class="footer__social col-lg-3 col-12 row justify-content-between">
+                <ul class="footer__social col-lg-3 col-12 row justify-content-end">
                     <!-- <li class="social__item col-auto">
                         <a href="#" class="social__link insta"></a>
                     </li> -->
@@ -282,7 +250,7 @@
      <!--Попап Прайс-->
     <div class="vip-spa__container">
         <button type="submit" class="vip-spa__close js-priceClose"></button>
-        <div class="swiper swiper-price container vip-spa__slider">
+        <div class="swiper container vip__slider">
             <!-- враппер -->
             <div class="swiper-wrapper">
 
@@ -294,7 +262,7 @@
                 <!-- слайды -->
                 <div class="swiper-slide swiper-vip__slide">
                     <figure class="swiper-price__image">
-                        <img src="<?= $image; ?>" class="swiper-price__img">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="swiper-price__img">
                     </figure>
                 </div>
 
@@ -319,10 +287,11 @@
 	    document.addEventListener( 'wpcf7mailsent', function( event ) {      
         
         setTimeout(function() {         
-            window.location.replace("/spasibo/");                         
+            window.location.replace("/thanks/");                         
         }, 100);  
 
         } ); 
+        
     </script>  
 
     <?php wp_footer(); ?>

@@ -142,14 +142,26 @@ function vertex_scripts() {
 	wp_enqueue_style('vertex-normalize', get_template_directory_uri() . '/css/normalize.css');
 	wp_enqueue_style('vertex-bootstrap-grid', get_template_directory_uri() . '/css/bootstrap-grid.min.css');
 	wp_enqueue_style('vertex-swiper-bundle', get_template_directory_uri() . '/css/swiper-bundle.min.css');
-	wp_enqueue_style('vertex-jquery.fancybox', get_template_directory_uri() . '/css/jquery.fancybox.min.css');
+	// wp_enqueue_style('vertex-jquery.fancybox', get_template_directory_uri() . '/css/jquery.fancybox.min.css');
 	wp_enqueue_style('vertex-style', get_template_directory_uri() . '/css/style.css');
+	wp_register_style( 'fancybox_css', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css' );
+	wp_enqueue_style('fancybox_css');
 	
-	wp_enqueue_script('vertex-jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js');
-	wp_enqueue_script('vertex-main', get_template_directory_uri() . '/js/main.js');
-	wp_enqueue_script('vertex-jquery.fancybox-js', get_template_directory_uri() . '/js/jquery.fancybox.min.js');
+	add_action( 'init', 'true_jquery_register' );	
+	function true_jquery_register() {
+		if ( !is_admin() ) {
+			wp_deregister_script( 'jquery' );
+			wp_register_script( 'jquery', ( 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' ), false, null, true );
+			wp_enqueue_script( 'jquery' );
+		}
+	}
+	wp_register_script( 'fancybox_js', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array('jquery'), null, true );
+	wp_enqueue_script('fancybox_js');
+	wp_enqueue_script('vertex-main', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true );
+	// wp_enqueue_script('vertex-jquery.fancybox-js', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), null, true);
 	wp_enqueue_script('vertex-swiper-bundle.min', get_template_directory_uri() . '/js/swiper-bundle.min.js');
 	wp_enqueue_script('vertex-slide_up', get_template_directory_uri() . '/js/slide_up.js');	
+	
 
 
 
