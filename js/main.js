@@ -660,7 +660,7 @@ window.addEventListener('DOMContentLoaded', function(){
   new Swiper('.vip__slider', {
     // Optional parameters
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
     speed: 700,    
@@ -670,6 +670,15 @@ window.addEventListener('DOMContentLoaded', function(){
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2',
     }, 
+
+    freeMode: {
+      enabled: true,
+    },
+
+    autoplay: {
+      delay: 4000,            
+      waitForTransition: true,
+    },  
   });
 
   // Слайдер в блоке Transfer
@@ -821,12 +830,12 @@ window.addEventListener('DOMContentLoaded', function(){
     // },    
   });
 
-  // Слайдер Price / Прайс
+  // Слайдер Price / Прайс VIP SPA в попапе
 
   new Swiper('.swiper-price', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     slidesPerView: 1,
     spaceBetween: 10,
     speed: 700, 

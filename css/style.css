@@ -2176,6 +2176,7 @@ h2.section-block__heading {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   -ms-flex-direction: column;
+  margin-left: auto;
 }
 
 .pool-box__items {
@@ -3405,6 +3406,9 @@ h2.section-block__heading {
   }
   .gallery__image {
     height: 30vw;
+  }
+  .header__top .menu .menu__list li {
+    padding: 4px 30px;
   }
 }
 
@@ -4784,6 +4788,9 @@ h2.section-block__heading {
     width: 100%;
     max-width: 100%;
   }
+  .header__top .menu .menu__list li {
+    padding: 3px 16px;
+  } 
 }
 
 @media screen and (max-width: 575px) and (max-height: 420px) {

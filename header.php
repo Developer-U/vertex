@@ -97,12 +97,7 @@
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#restraunt"
                                         class="menu__link <?php echo $link_slide; ?>">restraunt</a>
-                                </li>
-
-                                <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#reviews"
-                                        class="menu__link <?php echo $link_slide; ?>">reviews</a>
-                                </li>
+                                </li>                               
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#contacts"
@@ -145,12 +140,7 @@
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#restraunt"
                                         class="menu__link <?php echo $link_slide; ?>">ресторан</a>
-                                </li>
-
-                                <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#reviews"
-                                        class="menu__link <?php echo $link_slide; ?>">отзывы</a>
-                                </li>
+                                </li>                               
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#contacts"

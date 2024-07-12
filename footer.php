@@ -110,7 +110,7 @@
      <!--Попап Прайс-->
     <div class="vip-spa__container">
         <button type="submit" class="vip-spa__close js-priceClose"></button>
-        <div class="swiper container vip__slider">
+        <div class="swiper container swiper-price">
             <!-- враппер -->
             <div class="swiper-wrapper">
 
@@ -250,7 +250,7 @@
      <!--Попап Прайс-->
     <div class="vip-spa__container">
         <button type="submit" class="vip-spa__close js-priceClose"></button>
-        <div class="swiper container vip__slider">
+        <div class="swiper container swiper-price">
             <!-- враппер -->
             <div class="swiper-wrapper">
 

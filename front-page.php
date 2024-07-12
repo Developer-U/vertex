@@ -760,37 +760,7 @@ if (get_locale() == 'en_US') {
                         <!-- кнопки для навигации -->
                         <div class="swiper-button-prev2"></div>
                         <div class="swiper-button-next2"></div>
-                    </div>
-
-                    <div class="col-12 vip-block">
-                        <?php 
-                        $vip_spa_img1 = get_field('vip_spa_img1');
-                        $vip_spa_img2 = get_field('vip_spa_img2');
-                        $vip_spa_img3 = get_field('vip_spa_img3');
-                        ?>
-                        <div class="d-grid justify-content-between gap-2 vip-cards swiper-vip__box">
-                            <?php if($vip_spa_img1) { ?>                               
-                                <figure class="villa-cards__image">
-                                    <img src="<?php echo $vip_spa_img1; ?>" class="swiper-apart__img"
-                                        alt="Вип-сауна Vertex">
-                                </figure>                               
-                            <?php } 
-
-                            if($vip_spa_img2) { ?>                         
-                                <figure class="villa-cards__image">
-                                    <img src="<?php echo $vip_spa_img2; ?>" class="swiper-apart__img"
-                                        alt="Вип-сауна Vertex">
-                                </figure>                             
-                            <?php }
-
-                            if($vip_spa_img3) { ?>                         
-                                <figure class="villa-cards__image">
-                                    <img src="<?php echo $vip_spa_img3; ?>" class="swiper-apart__img"
-                                        alt="Вип-сауна Vertex">
-                                </figure>                              
-                            <?php } ?>
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
 
                 <div
@@ -1986,37 +1956,7 @@ if (get_locale() == 'en_US') {
                         <!-- кнопки для навигации -->
                         <div class="swiper-button-prev2"></div>
                         <div class="swiper-button-next2"></div>
-                    </div>
-
-                    <div class="col-12 vip-block">
-                        <?php 
-                        $vip_spa_img1 = get_field('vip_spa_img1');
-                        $vip_spa_img2 = get_field('vip_spa_img2');
-                        $vip_spa_img3 = get_field('vip_spa_img3');
-                        ?>
-                        <div class="d-grid justify-content-between gap-2 vip-cards swiper-vip__box">
-                            <?php if($vip_spa_img1) { ?>                               
-                                <figure class="villa-cards__image">
-                                    <img src="<?php echo $vip_spa_img1; ?>" class="swiper-apart__img"
-                                        alt="Вип-сауна Vertex">
-                                </figure>                              
-                            <?php } 
-
-                            if($vip_spa_img2) { ?>                              
-                                <figure class="villa-cards__image">
-                                    <img src="<?php echo $vip_spa_img2; ?>" class="swiper-apart__img"
-                                        alt="Вип-сауна Vertex">
-                                </figure>                            
-                            <?php }
-
-                            if($vip_spa_img3) { ?>                                
-                                <figure class="villa-cards__image">
-                                    <img src="<?php echo $vip_spa_img3; ?>" class="swiper-apart__img"
-                                        alt="Вип-сауна Vertex">
-                                </figure>                             
-                            <?php } ?>
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
 
                 <div
