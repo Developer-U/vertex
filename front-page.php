@@ -775,70 +775,68 @@ if (get_locale() == 'en_US') {
         </div>
     </section>
 
-    <section id="pool_en" class="pool">
-        <div class="container">
-            <div class="pool__cont row align-items-start justify-content-between">
-                <div class="row pool-box pool__box col-xl-6 col-lg-7 col-12">
-                    <h2 class="pool__heading">
-                        <?php the_field('pool_head_en'); ?>
-                    </h2>
+    <section id="pool_en" class="pool">     
+        <div class="pool__cont d-flex align-items-start justify-content-between">
+            <div class="row pool-box pool__box">
+                <h2 class="pool__heading">
+                    <?php the_field('pool_head_en'); ?>
+                </h2>
 
-                    <p class="villa__text villa__text_regular">
-                        <?php the_field('pool_subhead_en'); ?>
-                    </p>
+                <p class="villa__text villa__text_regular">
+                    <?php the_field('pool_subhead_en'); ?>
+                </p>
 
-                    <div class="villa__text villa__text_regular">
-                        <?php the_field('pool_text_en'); ?>
-                    </div>
-
-                    <ul class="spa-advantages pool-box__items row justify-content-between">
-                        <li class="spa-advantages__item col-sm-3 col-6">
-                            <span class="spa-advantages__img pool1"></span>
-                            <p class="spa-advantages__descr">
-                                <?php the_field('pool_item1_en'); ?>
-                            </p>
-                        </li>
-
-                        <li class="spa-advantages__item col-sm-3 col-6">
-                            <span class="spa-advantages__img pool2"></span>
-                            <p class="spa-advantages__descr">
-                                <?php the_field('pool_item2_en'); ?>
-                            </p>
-                        </li>
-
-                        <li class="spa-advantages__item col-sm-3 col-6">
-                            <span class="spa-advantages__img pool3"></span>
-                            <p class="spa-advantages__descr">
-                                <?php the_field('pool_item3_en'); ?>
-                            </p>
-                        </li>
-
-                        <li class="spa-advantages__item col-sm-3 col-6">
-                            <span class="spa-advantages__img pool4"></span>
-                            <p class="spa-advantages__descr">
-                                <?php the_field('pool_item4_en'); ?>
-                            </p>
-                        </li>
-                    </ul>
-
-                    <div class="row pool-box__button">
-                        <a class="gold-button villa__button col-6" href="/booking-en">to book</a>
-                    </div>
+                <div class="villa__text villa__text_regular">
+                    <?php the_field('pool_text_en'); ?>
                 </div>
 
-                <?php if (get_field('attention_text_en', 'options')): ?>
-                    <div class="attention col-xl-6 col-lg-5 col-12">
-                        <div class="attention__heading">
-                            <?php the_field('attention_text_en', 'options'); ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                <ul class="spa-advantages pool-box__items row justify-content-between">
+                    <li class="spa-advantages__item col-sm-3 col-6">
+                        <span class="spa-advantages__img pool1"></span>
+                        <p class="spa-advantages__descr">
+                            <?php the_field('pool_item1_en'); ?>
+                        </p>
+                    </li>
+
+                    <li class="spa-advantages__item col-sm-3 col-6">
+                        <span class="spa-advantages__img pool2"></span>
+                        <p class="spa-advantages__descr">
+                            <?php the_field('pool_item2_en'); ?>
+                        </p>
+                    </li>
+
+                    <li class="spa-advantages__item col-sm-3 col-6">
+                        <span class="spa-advantages__img pool3"></span>
+                        <p class="spa-advantages__descr">
+                            <?php the_field('pool_item3_en'); ?>
+                        </p>
+                    </li>
+
+                    <li class="spa-advantages__item col-sm-3 col-6">
+                        <span class="spa-advantages__img pool4"></span>
+                        <p class="spa-advantages__descr">
+                            <?php the_field('pool_item4_en'); ?>
+                        </p>
+                    </li>
+                </ul>
+
+                <div class="row pool-box__button">
+                    <a class="gold-button villa__button col-6" href="/booking-en">to book</a>
+                </div>
             </div>
 
-            <div class="col-12 pool-mobile row">
-                <a class="gold-button pool-mobile__button col-sm-7 col-12" href="/booking-en">book a room</a>
-            </div>
+            <?php if (get_field('attention_text_en', 'options')): ?>
+                <div class="attention col-xl-6 col-lg-5 col-12">
+                    <div class="attention__heading">
+                        <?php the_field('attention_text_en', 'options'); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
+
+        <div class="col-12 pool-mobile row">
+            <a class="gold-button pool-mobile__button col-sm-7 col-12" href="/booking-en">book a room</a>
+        </div>  
     </section>
 
     <section id="restraunt_en" class="restraunts">
@@ -1972,69 +1970,67 @@ if (get_locale() == 'en_US') {
     </section>
 
     <section id="pool" class="pool">
-        <div class="container">
-            <div class="pool__cont row align-items-start justify-content-between">
-                <div class="row pool-box pool__box col-xl-6 col-lg-7 col-12">
-                    <h2 class="pool__heading">
-                        <?php the_field('pool_head'); ?>
-                    </h2>
+        <div class="pool__cont d-flex align-items-start justify-content-between">
+            <div class="row pool-box pool__box">
+                <h2 class="pool__heading">
+                    <?php the_field('pool_head'); ?>
+                </h2>
 
-                    <p class="villa__text villa__text_regular">
-                        <?php the_field('pool_subhead'); ?>
-                    </p>
+                <p class="villa__text villa__text_regular">
+                    <?php the_field('pool_subhead'); ?>
+                </p>
 
-                    <div class="villa__text villa__text_regular">
-                        <?php the_field('pool_text'); ?>
-                    </div>
-
-                    <ul class="spa-advantages pool-box__items row justify-content-between">
-                        <li class="spa-advantages__item col-sm-3 col-6">
-                            <span class="spa-advantages__img pool1"></span>
-                            <p class="spa-advantages__descr">
-                                <?php the_field('pool_item1'); ?>
-                            </p>
-                        </li>
-
-                        <li class="spa-advantages__item col-sm-3 col-6">
-                            <span class="spa-advantages__img pool2"></span>
-                            <p class="spa-advantages__descr">
-                                <?php the_field('pool_item2'); ?>
-                            </p>
-                        </li>
-
-                        <li class="spa-advantages__item col-sm-3 col-6">
-                            <span class="spa-advantages__img pool3"></span>
-                            <p class="spa-advantages__descr">
-                                <?php the_field('pool_item3'); ?>
-                            </p>
-                        </li>
-
-                        <li class="spa-advantages__item col-sm-3 col-6">
-                            <span class="spa-advantages__img pool4"></span>
-                            <p class="spa-advantages__descr">
-                                <?php the_field('pool_item4'); ?>
-                            </p>
-                        </li>
-                    </ul>
-
-                    <div class="row pool-box__button">
-                        <a class="gold-button villa__button col-6" href="/booking/">забронировать</a>
-                    </div>
+                <div class="villa__text villa__text_regular">
+                    <?php the_field('pool_text'); ?>
                 </div>
 
-                <?php if (get_field('attention_text', 'options')): ?>
-                    <div class="attention col-xl-6 col-lg-5 col-12">
-                        <div class="attention__heading">
-                            <?php the_field('attention_text', 'options'); ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                <ul class="spa-advantages pool-box__items row justify-content-between">
+                    <li class="spa-advantages__item col-sm-3 col-6">
+                        <span class="spa-advantages__img pool1"></span>
+                        <p class="spa-advantages__descr">
+                            <?php the_field('pool_item1'); ?>
+                        </p>
+                    </li>
+
+                    <li class="spa-advantages__item col-sm-3 col-6">
+                        <span class="spa-advantages__img pool2"></span>
+                        <p class="spa-advantages__descr">
+                            <?php the_field('pool_item2'); ?>
+                        </p>
+                    </li>
+
+                    <li class="spa-advantages__item col-sm-3 col-6">
+                        <span class="spa-advantages__img pool3"></span>
+                        <p class="spa-advantages__descr">
+                            <?php the_field('pool_item3'); ?>
+                        </p>
+                    </li>
+
+                    <li class="spa-advantages__item col-sm-3 col-6">
+                        <span class="spa-advantages__img pool4"></span>
+                        <p class="spa-advantages__descr">
+                            <?php the_field('pool_item4'); ?>
+                        </p>
+                    </li>
+                </ul>
+
+                <div class="row pool-box__button">
+                    <a class="gold-button villa__button col-6" href="/booking/">забронировать</a>
+                </div>
             </div>
 
-            <div class="col-12 pool-mobile row">
-                <a class="gold-button pool-mobile__button col-sm-7 col-12" href="/booking/">забронировать номер</a>
-            </div>
+            <?php if (get_field('attention_text', 'options')): ?>
+                <div class="attention col-xl-6 col-lg-5 col-12">
+                    <div class="attention__heading">
+                        <?php the_field('attention_text', 'options'); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
+
+        <div ss="col-12 pool-mobile row">
+            <a class="gold-button pool-mobile__button col-sm-7 col-12" href="/booking/">забронировать номер</a>
+        </div>    
     </section>
 
     <section id="restraunt" class="restraunts">
