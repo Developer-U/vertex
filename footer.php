@@ -1,7 +1,7 @@
 <?php
-    if (get_locale() == 'en_US') {
-?>      
-    
+if (get_locale() == 'en_US') {
+    ?>
+
     <footer class="footer">
         <div class="container">
             <div class="row footer__box justify-content-between">
@@ -11,34 +11,34 @@
 
                 <ul class="menu-list footer__list col-lg-2 col-sm-4 col-12">
                     <li class="menu-list__item">
-                        <a href="#about" class="menu-list__link js-slideTo">about hotel</a>
+                        <a href="#about_en" class="menu-list__link js-slideTo">about hotel</a>
                     </li>
 
-                    <li class="menu-list__item">
+                    <!-- <li class="menu-list__item">
                         <a href="#appart" class="menu-list__link js-slideTo">rooms</a>
-                    </li>                   
+                    </li>                    -->
 
                     <li class="menu-list__item">
-                        <a href="#spa" class="menu-list__link js-slideTo">spa</a>
+                        <a href="#spa_en" class="menu-list__link js-slideTo">spa</a>
                     </li>
 
                     <li class="menu-list__item">
-                        <a href="#vip-spa" class="menu-list__link js-slideTo">vip spa</a>
+                        <a href="#services_en" class="menu-list__link js-slideTo">services</a>
                     </li>
                 </ul>
 
                 <ul class="menu-list footer__list col-lg-3 col-sm-4 col-12">
                     <li class="menu-list__item">
-                        <a href="#restraunt" class="menu-list__link js-slideTo">restraunts</a>
+                        <a href="#restraunt_en" class="menu-list__link js-slideTo">restraunts</a>
                     </li>
 
                     <li class="menu-list__item">
-                        <a href="#contacts" class="menu-list__link js-slideTo">contacts</a>
+                        <a href="#contacts_en" class="menu-list__link js-slideTo">contacts</a>
                     </li>
 
                     <li class="menu-list__item">
-                        <a href="#pool" class="menu-list__link js-slideTo">swimming pool</a>
-                    </li>   
+                        <a href="#pool_en" class="menu-list__link js-slideTo">swimming pool</a>
+                    </li>
                 </ul>
 
                 <ul class="footer__social col-lg-3 col-12 row justify-content-end">
@@ -47,7 +47,8 @@
                     </li> -->
 
                     <li class="social__item col-auto">
-                        <a href="<?php the_field('whatsapp', 'options'); ?>" class="social__link whatsapp" target="_blank"></a>
+                        <a href="<?php the_field('whatsapp', 'options'); ?>" class="social__link whatsapp"
+                            target="_blank"></a>
                     </li>
 
                     <!-- <li class="social__item col-auto">
@@ -55,7 +56,8 @@
                     </li> -->
 
                     <li class="social__item col-auto">
-                        <a href="<?php the_field('telegram', 'options'); ?>" class="social__link telegram" target="_blank"></a>
+                        <a href="<?php the_field('telegram', 'options'); ?>" class="social__link telegram"
+                            target="_blank"></a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +68,8 @@
                 </p>
 
                 <p class="copyright col-lg-6 col-12">
-                    Website development: <a class="copyright__link" href="https://sim-site.ru"> "Symbol style" web studio</a>
+                    Website development: <a class="copyright__link" href="https://sim-site.ru"> "Symbol style" web
+                        studio</a>
                 </p>
             </div>
         </div>
@@ -97,7 +100,7 @@
     </div>
 
     <!--Попап Узнать про трансфер-->
-     <div id="transfer" class="blackContainer application js-transferContainer">
+    <div id="transfer" class="blackContainer application js-transferContainer">
         <div class="application__box col-xl-6 col-sm-8 col-11">
             <button type="submit" class="application__close js-transferClose"></button>
 
@@ -107,39 +110,41 @@
         </div>
     </div>
 
-     <!--Попап Прайс-->
+    <!--Попап Прайс-->
     <div class="vip-spa__container">
         <button type="submit" class="vip-spa__close js-priceClose"></button>
         <div class="swiper container swiper-price">
             <!-- враппер -->
             <div class="swiper-wrapper">
 
-                <?php if( have_rows('add_price_en') ): ?>
-                <?php while( have_rows('add_price_en') ): the_row();
-                    $image_en = get_sub_field('new_price_en');
-                ?>
+                <?php if (have_rows('add_price_en')): ?>
+                    <?php while (have_rows('add_price_en')):
+                        the_row();
+                        $image_en = get_sub_field('new_price_en');
+                        ?>
 
-                <!-- слайды -->
-                <div class="swiper-slide swiper-vip__slide">
-                    <figure class="swiper-price__image">
-                        <img src="<?php echo $image_en['url']; ?>" alt="<?php echo $image_en['alt']; ?>" class="swiper-price__img">
-                    </figure>
-                </div>
+                        <!-- слайды -->
+                        <div class="swiper-slide swiper-vip__slide">
+                            <figure class="swiper-price__image">
+                                <img src="<?php echo $image_en['url']; ?>" alt="<?php echo $image_en['alt']; ?>"
+                                    class="swiper-price__img">
+                            </figure>
+                        </div>
 
-                <?php
+                        <?php
                     endwhile;
-                    endif;
+                endif;
                 ?>
-            </div>                   
-            
+            </div>
+
             <!-- кнопки для навигации -->
             <div class="swiper-button-prev2"></div>
             <div class="swiper-button-next2"></div>
-        </div> 
+        </div>
     </div>
 
     <?php
-        } elseif(get_locale() == 'ru_RU') {
+} elseif (get_locale() == 'ru_RU') {
     ?>
 
     <footer class="footer">
@@ -151,19 +156,19 @@
 
                 <ul class="menu-list footer__list col-lg-2 col-sm-4 col-12">
                     <li class="menu-list__item">
-                        <a href="https://vertexhotel.ru/#about" class="menu-list__link js-slideTo">об отеле</a>
+                        <a href="#about" class="menu-list__link js-slideTo">об отеле</a>
                     </li>
 
-                    <li class="menu-list__item">
+                    <!-- <li class="menu-list__item">
                         <a href="#appart" class="menu-list__link js-slideTo">номера</a>
-                    </li>                   
+                    </li>                    -->
 
                     <li class="menu-list__item">
                         <a href="#spa" class="menu-list__link js-slideTo">spa</a>
                     </li>
 
                     <li class="menu-list__item">
-                        <a href="#vip-spa" class="menu-list__link js-slideTo">vip spa</a>
+                        <a href="#services" class="menu-list__link js-slideTo">услуги</a>
                     </li>
                 </ul>
 
@@ -178,7 +183,7 @@
 
                     <li class="menu-list__item">
                         <a href="#pool" class="menu-list__link js-slideTo">бассейн</a>
-                    </li>   
+                    </li>
                 </ul>
 
                 <ul class="footer__social col-lg-3 col-12 row justify-content-end">
@@ -187,7 +192,8 @@
                     </li> -->
 
                     <li class="social__item col-auto">
-                        <a href="<?php the_field('whatsapp', 'options'); ?>" class="social__link whatsapp" target="_blank"></a>
+                        <a href="<?php the_field('whatsapp', 'options'); ?>" class="social__link whatsapp"
+                            target="_blank"></a>
                     </li>
 
                     <!-- <li class="social__item col-auto">
@@ -195,14 +201,16 @@
                     </li> -->
 
                     <li class="social__item col-auto">
-                        <a href="<?php the_field('telegram', 'options'); ?>" class="social__link telegram" target="_blank"></a>
+                        <a href="<?php the_field('telegram', 'options'); ?>" class="social__link telegram"
+                            target="_blank"></a>
                     </li>
                 </ul>
             </div>
 
             <div class="row copyright footer__copyright">
                 <p class="copyright col-lg-6 col-12">
-                    © Vertex 2021. All rights reserved. <a class="copyright__link" href="/privacy/">Политика конфиденциальности</a>
+                    © Vertex 2021. All rights reserved. <a class="copyright__link" href="/privacy/">Политика
+                        конфиденциальности</a>
                 </p>
 
                 <p class="copyright col-lg-6 col-12">
@@ -219,7 +227,8 @@
         <div class="application__box col-xl-6 col-sm-8 col-11">
             <button type="submit" class="application__close js-reserveClose"></button>
 
-            <h3 class="villa__subheading">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 15&nbsp;минут</h3>
+            <h3 class="villa__subheading">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 15&nbsp;минут
+            </h3>
 
             <?php echo do_shortcode('[contact-form-7 id="18" title="Контактная форма попап Забронировать SPA"]'); ?>
         </div>
@@ -230,73 +239,77 @@
         <div class="application__box col-xl-6 col-sm-8 col-11">
             <button type="submit" class="application__close js-vipSpaClose"></button>
 
-            <h3 class="villa__subheading">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 15&nbsp;минут</h3>
+            <h3 class="villa__subheading">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 15&nbsp;минут
+            </h3>
 
             <?php echo do_shortcode('[contact-form-7 id="22" title="Контактная форма попап Забронировать VIP-SPA"]'); ?>
         </div>
     </div>
 
     <!--Попап Узнать про трансфер-->
-     <div id="transfer" class="blackContainer application js-transferContainer">
+    <div id="transfer" class="blackContainer application js-transferContainer">
         <div class="application__box col-xl-6 col-sm-8 col-11">
             <button type="submit" class="application__close js-transferClose"></button>
 
-            <h3 class="villa__subheading">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 15&nbsp;минут</h3>
+            <h3 class="villa__subheading">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 15&nbsp;минут
+            </h3>
 
             <?php echo do_shortcode('[contact-form-7 id="23" title="Узнать про трансфер"]'); ?>
         </div>
     </div>
 
-     <!--Попап Прайс-->
+    <!--Попап Прайс-->
     <div class="vip-spa__container">
         <button type="submit" class="vip-spa__close js-priceClose"></button>
         <div class="swiper container swiper-price">
             <!-- враппер -->
             <div class="swiper-wrapper">
 
-                <?php if( have_rows('add_price') ): ?>
-                <?php while( have_rows('add_price') ): the_row();
-                    $image = get_sub_field('new_price');
-                ?>
+                <?php if (have_rows('add_price')): ?>
+                    <?php while (have_rows('add_price')):
+                        the_row();
+                        $image = get_sub_field('new_price');
+                        ?>
 
-                <!-- слайды -->
-                <div class="swiper-slide swiper-vip__slide">
-                    <figure class="swiper-price__image">
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="swiper-price__img">
-                    </figure>
-                </div>
+                        <!-- слайды -->
+                        <div class="swiper-slide swiper-vip__slide">
+                            <figure class="swiper-price__image">
+                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"
+                                    class="swiper-price__img">
+                            </figure>
+                        </div>
 
-                <?php
+                        <?php
                     endwhile;
-                    endif;
+                endif;
                 ?>
-            </div>                   
-            
+            </div>
+
             <!-- кнопки для навигации -->
             <div class="swiper-button-prev2"></div>
             <div class="swiper-button-next2"></div>
-        </div> 
-    </div>   
+        </div>
+    </div>
 
     <?php
-        }
-    ?>
+}
+?>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
-    <script type="text/javascript">
-	    document.addEventListener( 'wpcf7mailsent', function( event ) {      
-        
-        setTimeout(function() {         
-            window.location.replace("/thanks/");                         
-        }, 100);  
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+<script type="text/javascript">
+    document.addEventListener('wpcf7mailsent', function (event) {
 
-        } ); 
-        
-    </script>  
+        setTimeout(function () {
+            window.location.replace("/thanks/");
+        }, 100);
 
-    <?php wp_footer(); ?>
+    });
 
-    </body>
+</script>
+
+<?php wp_footer(); ?>
+
+</body>
 
 
 

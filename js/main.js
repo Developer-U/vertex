@@ -12,11 +12,11 @@ jQuery(function($) {
   $(window).scroll(function(){
      if($(this).scrollTop()>=200) {
        $('.header').css({      
-         'background-color':'rgba(0,0,0, .7)'                 
+         'background-color':'rgba(0,0,0, .8)'                 
        }); 
      } else {
        $('.header').css({      
-         'background-color':'rgba(0,0,0, .2)'                 
+         'background-color':'rgba(0,0,0, .7)'                 
        });
      }
    });
@@ -411,9 +411,14 @@ window.addEventListener('DOMContentLoaded', function(){
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 14,
     speed: 700,
-  
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      }
+    },  
 
     // Navigation arrows
     navigation: {

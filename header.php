@@ -69,38 +69,33 @@
                     if (get_locale() == 'en_US') {
                         ?>
                         <nav id="menu" class="menu header__menu">
-                            <ul class="menu__list row row justify-content-between">
+                            <ul class="menu__list d-flex">
                                 <li class="menu__item menu__item_mobile col-auto">
                                     <a href="/en" class="menu__link js-slideTo">main</a>
                                 </li>
 
                                 <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#about"
+                                    <a href="<?php echo $link_hash; ?>#about_en"
                                         class="menu__link <?php echo $link_slide; ?>">about hotel</a>
-                                </li>
-
+                                </li>   
+                                
                                 <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#appart"
-                                        class="menu__link <?php echo $link_slide; ?>">rooms</a>
-                                </li>
-
-                                <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#spa"
+                                    <a href="<?php echo $link_hash; ?>#spa_en"
                                         class="menu__link <?php echo $link_slide; ?>">spa</a>
-                                </li>
+                                </li> 
 
                                 <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#vip-spa"
-                                        class="menu__link <?php echo $link_slide; ?>">vip spa</a>
-                                </li>
+                                    <a href="<?php echo $link_hash; ?>#services_en"
+                                        class="menu__link <?php echo $link_slide; ?>">services</a>
+                                </li>                              
 
                                 <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#restraunt"
+                                    <a href="<?php echo $link_hash; ?>#restraunt_en"
                                         class="menu__link <?php echo $link_slide; ?>">restraunt</a>
                                 </li>                               
 
                                 <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#contacts"
+                                    <a href="<?php echo $link_hash; ?>#contacts_en"
                                         class="menu__link <?php echo $link_slide; ?>">contacts</a>
                                 </li>
                             </ul>
@@ -111,11 +106,11 @@
                         ?>
 
                         <nav id="menu" class="menu header__menu">
-                            <ul class="menu__list row row justify-content-between">
+                            <ul class="menu__list d-flex">
                                 <li class="menu__item menu__item_mobile col-auto">
                                     <a href="<?php echo $link_hash; ?>"
                                         class="menu__link <?php echo $link_slide; ?>">главная</a>
-                                </li>
+                                </li>                               
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#about"
@@ -123,19 +118,14 @@
                                 </li>
 
                                 <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#appart"
-                                        class="menu__link <?php echo $link_slide; ?>">номера</a>
-                                </li>
-
-                                <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#spa"
                                         class="menu__link <?php echo $link_slide; ?>">spa</a>
-                                </li>
-
+                                </li> 
+                                
                                 <li class="menu__item col-auto">
-                                    <a href="<?php echo $link_hash; ?>#vip-spa"
-                                        class="menu__link <?php echo $link_slide; ?>">vip spa</a>
-                                </li>
+                                    <a href="<?php echo $link_hash; ?>#services"
+                                        class="menu__link <?php echo $link_slide; ?>">услуги</a>
+                                </li>  
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#restraunt"
