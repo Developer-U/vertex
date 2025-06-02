@@ -28,7 +28,7 @@ define( 'DB_NAME', 'u1641176_vertex' );
 define( 'DB_USER', 'u1641_vertex' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'K#3sAN_1Dd0' );
+define( 'DB_PASSWORD', 'X36kyn~80Yu%%7_458' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost:3306' );

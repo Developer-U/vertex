@@ -251,10 +251,10 @@ window.addEventListener('DOMContentLoaded', function(){
     freeMode: {
         enabled: true,
     },
-    autoplay: {
-        delay: 4000,            
-        waitForTransition: true,
-    },    
+    // autoplay: {
+    //     delay: 4000,            
+    //     waitForTransition: true,
+    // },    
   });
 
   const swiper_en = new Swiper('.hero-slider_en_US', {
@@ -272,10 +272,10 @@ window.addEventListener('DOMContentLoaded', function(){
     freeMode: {
         enabled: true,
     },
-    autoplay: {
-        delay: 4000,            
-        waitForTransition: true,
-    },    
+    // autoplay: {
+    //     delay: 4000,            
+    //     waitForTransition: true,
+    // },    
   }); 
   
 

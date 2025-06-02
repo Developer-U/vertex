@@ -17,14 +17,14 @@ if (get_locale() == 'en_US') {
             <?php get_template_part('template-parts/hero', 'slider'); ?>
         </div>
 
-        <div class="container-fluid fluid1 hero__box">
+        <div class="container-fluid fluid1 hero__box d-flex flex-column justify-content-end">
             <div class="row justify-content-between">
                 <div class="address__mobile"></div>
 
-                <a href="/en/booking-en/" class="gold-button hero__button col-auto">book a room</a>
+                <!--a href="/en/booking-en/" class="gold-button hero__button col-auto">book a room</a>-->
             </div>
 
-            <div class="hero__medium row justify-content-between">
+            <!-- <div class="hero__medium row justify-content-between">
                 <div
                     class="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-9 col-12 row justify-content-between hero__logo logo">
                     <a href="/" class="logo_img col-xl-7 col-6">
@@ -35,7 +35,7 @@ if (get_locale() == 'en_US') {
                         <h1 class="logo__descr">In the center of the resort infrastructure</h1>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="row hero__reserve cols-auto align-items-end justify-content-between">
                 <div class="hero__icons col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-8 col-10">
@@ -1173,14 +1173,14 @@ if (get_locale() == 'en_US') {
                 <?php get_template_part('template-parts/hero', 'slider'); ?>
             </div>
 
-            <div class="container-fluid fluid1 hero__box">
+            <div class="container-fluid fluid1 hero__box d-flex flex-column justify-content-end">
                 <div class="row justify-content-between">
                     <div class="address__mobile"></div>
 
-                    <a href="/booking/" class="gold-button hero__button col-auto">забронировать номер</a>
+                    <!--<a href="/booking/" class="gold-button hero__button col-auto">забронировать номер</a>-->
                 </div>
 
-                <div class="hero__medium row justify-content-between">
+                <!-- <div class="hero__medium row justify-content-between">
                     <div
                         class="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-9 col-12 row justify-content-between hero__logo logo">
                         <a href="/" class="logo_img col-xl-7 col-6">
@@ -1191,82 +1191,9 @@ if (get_locale() == 'en_US') {
                             <h1 class="logo__descr">В&nbsp;центре курортной инфраструктуры</h1>
                         </div>
                     </div>
+                </div> -->
 
-                    <!-- <article class="action col-xxl-4 col-xl-5 col-lg-5">
-                <h2 class="visually-hidden">Спецпредложения</h2>
-                <div class="swiper swiper-hero">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide action__slide">
-                            <h3 class="action__heading">Autumn sale!</h3>
-
-                            <p class="action__descr">
-                                Забронируй номер на нашем сайте, и получи дополнительную скидку 10%! *
-                            </p>
-
-                            <p class="action__text">
-                                Условия акции действуют с 08.11.2021 по 11.12.2021
-                            </p>
-
-                            <button class="action__button gold-button">получить скидку!</button>
-                        </div>
-
-                        <div class="swiper-slide action__slide">
-                            <h3 class="action__heading">Autumn sale!</h3>
-
-                            <p class="action__descr">
-                                Забронируй номер на нашем сайте, и получи дополнительную скидку 10%! *
-                            </p>
-
-                            <p class="action__text">
-                                Условия акции действуют с 08.11.2021 по 11.12.2021
-                            </p>
-
-                            <button class="action__button gold-button">получить скидку!</button>
-                        </div>
-
-                        <div class="swiper-slide action__slide">
-                            <h3 class="action__heading">Autumn sale!</h3>
-
-                            <p class="action__descr">
-                                Забронируй номер на нашем сайте, и получи дополнительную скидку 10%! *
-                            </p>
-
-                            <p class="action__text">
-                                Условия акции действуют с 08.11.2021 по 11.12.2021
-                            </p>
-
-                            <button class="action__button gold-button">получить скидку!</button>
-                        </div>
-                    </div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </article> -->
-                </div>
-
-                <div class="row hero__reserve cols-auto align-items-end justify-content-between">
-                    <div class="hero__icons col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-8 col-10">
-                        <ul class="social hero__social row justify-content-between">
-                            <!-- <li class="social__item col-auto">
-                        <a href="#" class="social__link insta"></a>
-                    </li> -->
-
-                            <li class="social__item col-auto">
-                                <a href="<?php the_field('whatsapp', 'options'); ?>" class="social__link whatsapp"
-                                    target="_blank"></a>
-                            </li>
-
-                            <!-- <li class="social__item col-auto">
-                        <a href="#" class="social__link viber"></a>
-                    </li> -->
-
-                            <li class="social__item col-auto">
-                                <a href="<?php the_field('telegram', 'options'); ?>" class="social__link telegram"
-                                    target="_blank"></a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="row hero__reserve cols-auto align-items-end justify-content-between">                    
 
                     <div class="col-xxl-8 col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 hero__reserved">
                         <div id='block-search'>

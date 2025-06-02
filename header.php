@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/wp-content/themes/vertex/img/favicon.ico">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=68f9a0ea-6fba-4a6e-9f0a-5a716b0b30d5&lang=ru_RU"
         type="text/javascript">
@@ -55,7 +57,11 @@
     <header class="header">
         <div class="container-fluid fluid1">
             <div class="row justify-content-between align-items-center">
-                <div class="col-xxl-7 col-xl-10 col-lg-10 col-md-1 col-sm-1 col-3 header__top">
+                <div
+                    class="col-xxl-7 col-xl-10 col-lg-10 col-md-1 col-sm-1 col-3 header__top d-flex align-items-center gap-2">
+                    <a href="/" class="header__logo d-block">
+                        <img src="/wp-content/themes/vertex/img/logo.svg" alt="Логотип Vertex" class="logo__logo">
+                    </a>
 
                     <?php
                     if (is_front_page()) {
@@ -77,22 +83,22 @@
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#about_en"
                                         class="menu__link <?php echo $link_slide; ?>">about hotel</a>
-                                </li>   
-                                
+                                </li>
+
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#spa_en"
                                         class="menu__link <?php echo $link_slide; ?>">spa</a>
-                                </li> 
+                                </li>
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#services_en"
                                         class="menu__link <?php echo $link_slide; ?>">services</a>
-                                </li>                              
+                                </li>
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#restraunt_en"
                                         class="menu__link <?php echo $link_slide; ?>">restraunt</a>
-                                </li>                               
+                                </li>
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#contacts_en"
@@ -110,7 +116,7 @@
                                 <li class="menu__item menu__item_mobile col-auto">
                                     <a href="<?php echo $link_hash; ?>"
                                         class="menu__link <?php echo $link_slide; ?>">главная</a>
-                                </li>                               
+                                </li>
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#about"
@@ -120,17 +126,17 @@
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#spa"
                                         class="menu__link <?php echo $link_slide; ?>">spa</a>
-                                </li> 
-                                
+                                </li>
+
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#services"
                                         class="menu__link <?php echo $link_slide; ?>">услуги</a>
-                                </li>  
+                                </li>
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#restraunt"
                                         class="menu__link <?php echo $link_slide; ?>">ресторан</a>
-                                </li>                               
+                                </li>
 
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#contacts"
@@ -172,16 +178,18 @@
                     }
                     ?>
 
-                    <a href="tel:<?php the_field('номер_телефона', 'options'); ?>"
-                        class="address__phone"><?php the_field('номер_телефона', 'options'); ?></a>
-
-                    <!-- <div class="address__flag">
-                        <div class="switch-btn switch-on"></div>
-                        <span class="winter-summer-heads">
-                            <p class="col-auto">лето</p>
-                            <p class="col-auto">зима</p>
-                        </span>
-                    </div> -->
+                    <div class="hero__icons col-auto">
+                        <?php if (get_field('номер_телефона', 'options')) { ?>
+                            <a href="tel:<?php the_field('номер_телефона', 'options'); ?>"
+                                class="address__phone"><?php the_field('номер_телефона', 'options'); ?>
+                            </a>
+                        <?php }
+                        if (get_field('phone_2', 'options')) { ?>
+                            <a href="tel:<?php the_field('phone_2', 'options'); ?>"
+                                class="address__phone"><?php the_field('phone_2', 'options'); ?>
+                            </a>
+                        <?php } ?>
+                    </div>
 
                     <ul class="address__language d-flex justify-content-between">
                         <?php
