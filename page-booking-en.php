@@ -1,7 +1,9 @@
 <?php
-get_header(); ?>
+get_header();
+?>
 
-<section class="booking">
+<section class="booking overlay"
+style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>); background-size: cover; background-repeat:no-repeat; background-position:center">
     <div class="container">
         <div class="row booking__box row align-items-end justify-content-center">
             <h1 class="booking__heading col-md-10 col-12">Book a room on the best terms!</h1>

@@ -98,6 +98,21 @@ body {
   padding: 13px 0 20px 0;
 }
 
+.overlay, .overlay .container {
+  position: relative;
+}
+
+.overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 2px);
+  background: rgba(5, 11, 18, .4);
+}
+
 figure>img, a>img {
   object-fit: cover;
   width: 100%;
@@ -2950,11 +2965,11 @@ h2.section-block__heading {
 /*Booking*/
 
 .booking {
-  background: var(--black) url("/wp-content/themes/vertex/img/booking-bg.jpg") no-repeat center/cover;
+  background: var(--black);
 }
 
 .booking__box {
-  min-height: 333px;
+  min-height: 25vw;
   padding-top: 140px;
   padding-bottom: 40px;
   text-align: center;
