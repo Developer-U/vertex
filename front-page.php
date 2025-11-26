@@ -126,7 +126,10 @@ if (get_locale() == 'en_US') {
         </div>
     </section>
 
-    <?php get_template_part('/template-parts/gallery'); ?>
+    <?php 
+    get_template_part('template-parts/holiday', 'menu-en');
+    
+    get_template_part('/template-parts/gallery'); ?>
     <!-- Скрываем блок Vertex: More than just a hotel 
     <section class="section more">
         <div class="container-fluid">
@@ -1145,7 +1148,7 @@ if (get_locale() == 'en_US') {
                         <div id="map" class="contact__one"></div>
                     </div>
 
-                    <div class="contact__image col-lg-7 col-12">
+                    <div class="contact__image col-lg-7 col-12" style="background-image:url( <?php echo get_field('booking-contacts-image_en')['url']; ?> );">
                         <div class="contact__block col-sm-9 col-11 position-relative">
                             <h2 class="contact__heading">
                                 Book your dream room today!
@@ -1261,7 +1264,11 @@ if (get_locale() == 'en_US') {
             </div>
         </section>
 
-        <?php get_template_part('/template-parts/gallery'); ?>
+        <?php 
+        
+        get_template_part('template-parts/holiday', 'menu');
+
+        get_template_part('/template-parts/gallery'); ?>
         <!-- Скрываем блок Vertex: больше, чем просто отель 
     <section class="section more">
         <div class="container-fluid">
@@ -2295,7 +2302,7 @@ if (get_locale() == 'en_US') {
                         <div id="map" class="contact__one"></div>
                     </div>
 
-                    <div class="contact__image col-lg-7 col-12">
+                    <div class="contact__image col-lg-7 col-12" style="background-image:url( <?php echo get_field('booking-contacts-image')['url']; ?> );">
                         <div class="contact__block col-sm-9 col-11 position-relative">
                             <h2 class="contact__heading">
                                 Забронируйте номер вашей&nbsp;мечты уже&nbsp;сегодня!
@@ -2312,4 +2319,6 @@ if (get_locale() == 'en_US') {
 }
 ?>
 
-    <?php get_footer();
+    <?php 
+    
+    get_footer();

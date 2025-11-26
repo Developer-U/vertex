@@ -89,6 +89,13 @@ body {
   gap: 32px;
 }
 
+.plashka__title p {
+  margin-top: 60px;
+  font-size: 24px;
+  line-height: 130%;
+  color: #960;
+}
+
 .header__logo {
   width: 143px;
   margin-right: 4vw;
@@ -100,6 +107,12 @@ body {
 
 .overlay, .overlay .container {
   position: relative;
+}
+
+.two-cols-list {
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .overlay::before {
@@ -363,6 +376,11 @@ h2, .booking__heading, .privacy__heading {
 
 .privacy__heading {
   margin-bottom: 40px;
+}
+
+a.gallery-tab-list__image {
+  display: block;
+  overflow: hidden;
 }
 
 h2::after, .privacy__heading::after {
@@ -932,6 +950,10 @@ p {
   top: 0;
   left: 0;
   /* min-height: 100vh; */
+}
+
+.section.grey {
+  background-color: #DCDCDC;
 }
 
 .about__image {
@@ -2346,7 +2368,7 @@ h2.section-block__heading {
 }
 
 .restraunts-box__img.img1 {
-  background: #c8ced0 url("/wp-content/themes/vertex/img/myshmyla.jpg") no-repeat center/cover;
+  background: #c8ced0 url("/wp-content/themes/vertex/img/red_arbat.jpeg") no-repeat center/cover;
 }
 
 .restraunts-box__img.img2 {
@@ -2354,7 +2376,7 @@ h2.section-block__heading {
 }
 
 .restraunts-box__img.img3 {
-  background: #c8ced0 url("/wp-content/themes/vertex/img/lobby.jpg") no-repeat center/cover;
+  background: #c8ced0 url("/wp-content/themes/vertex/img/lobby_bar.jpeg") no-repeat center/cover;
 }
 
 .restraunts-box__heading {
@@ -2824,7 +2846,9 @@ h2.section-block__heading {
   padding-top: 100px;
   padding-bottom: 100px;
   padding-left: 151px;
-  background: var(--black) url("/wp-content/themes/vertex/img/contacts-bg.jpg") no-repeat center/cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -2901,7 +2925,11 @@ h2.section-block__heading {
 
 .footer__social {
   margin-right: 10px;
-  padding-left: 76px;
+  /* padding-left: 76px; */
+}
+
+.hotel101-widget {
+  margin: 0 auto;
 }
 
 .menu-list__link {
@@ -3702,6 +3730,10 @@ h2.section-block__heading {
     margin-right: 0;
   }
 
+  .two-cols-list {
+    grid-template-columns: 1fr;
+  }
+
   .menu {
     display: none;
     align-items: center;
@@ -3973,6 +4005,15 @@ h2.section-block__heading {
     padding: 40px 16px 10px;
   }
 
+  .plashka__title p {
+    margin-top: 50px;
+  }
+
+  .two-cols-list {
+    row-gap: 18px;
+    column-gap: 18px;
+  }
+
   .agree {
     font-size: 12px;
     line-height: 14px;
@@ -4223,7 +4264,7 @@ h2.section-block__heading {
   }
 
   .restraunts-box__img.img3 {
-    background-image: url("/wp-content/themes/vertex/img/lobby-tablet.jpg");
+    background-image: url("/wp-content/themes/vertex/img/lobby_bar.jpeg");
   }
 
   .transfer__image {
@@ -4280,8 +4321,8 @@ h2.section-block__heading {
   .footer__social {
     margin: 30px auto 0 auto;
     padding-top: 30px;
-    padding-right: 30%;
-    padding-left: 30%;
+    padding-right: 30px;
+    padding-left: 30px;
     border-top: 1px solid var(--white);
   }
 
@@ -4621,10 +4662,10 @@ h2.section-block__heading {
     margin-bottom: 40px;
   }
 
-  .footer__social {
+  /* .footer__social {
     padding-right: 10%;
     padding-left: 10%;
-  }
+  } */
 
   .to-top {
     right: 10px;
@@ -4863,6 +4904,11 @@ h2.section-block__heading {
     margin: 0 0 0 auto;
   }
 
+  .plashka__title p {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
   .hero__social {
     padding: 5px 0 5px 0;
     align-items: flex-end;
@@ -5073,6 +5119,10 @@ h2.section-block__heading {
     padding-bottom: 0;
   }
 
+  .two-columns {
+    padding-bottom: 60px;
+  }
+
   .services-box__item {
     width: 100%;
     height: 250px;
@@ -5216,6 +5266,11 @@ h2.section-block__heading {
     padding-top: 0;
     text-decoration: underline;
     background: transparent;
+  }
+
+  .two-cols-list {
+    row-gap: 18px;
+    column-gap: 16px;
   }
 
   .pool-box {
@@ -5380,10 +5435,10 @@ h2.section-block__heading {
     margin-bottom: 30px;
   }
 
-  .footer__social {
+  /* .footer__social {
     padding-right: 10%;
     padding-left: 10%;
-  }
+  } */
 
   .to-top {
     right: 10px;

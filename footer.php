@@ -186,10 +186,27 @@ if (get_locale() == 'en_US') {
                     </li>
                 </ul>
 
-                <ul class="footer__social col-lg-3 col-12 row justify-content-end">
+                <ul class="footer__social col-lg-3 col-12 row justify-content-center">
                     <!-- <li class="social__item col-auto">
                         <a href="#" class="social__link insta"></a>
                     </li> -->
+                    <!-- 101Hotel_partner_widget start -->
+                    <a class="social__item col-auto" target="_blank" title="Отель Vertex - 101hotels.com рекомендует" id="hotels101_partner_widget_860"
+                        style="text-decoration: none; display: block; width: 100%; height: fit-content;"
+                        href="https://101hotels.com/main/cities/esto-sadok/otel_vertex_spa_hotel.html">
+
+                    </a>
+                    <script>
+                        (function () {
+                            var script = document.createElement('script'), generated_id = 860;
+                            script.type = 'text/javascript';
+                            script.async = true;
+                            script.src = 'https://101hotels.com/widget/generator/' + generated_id + '/653840/t-16';
+                            var node = document.getElementsByTagName('head')[0];
+                            node.appendChild(script);
+                        }());
+                    </script>
+                    <!-- 101Hotel_partner_widget finish -->
 
                     <li class="social__item col-auto">
                         <a href="<?php the_field('whatsapp', 'options'); ?>" class="social__link whatsapp"
