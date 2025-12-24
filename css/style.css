@@ -656,6 +656,11 @@ p {
 
 .address__mobile {
   display: none;
+  height: 260px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*Burger*/
@@ -940,6 +945,14 @@ p {
 
 .hero__reserved {
   min-height: 62px;
+}
+
+.uc-footer .t977__col-inner:nth-last-of-type() {
+  margin-bottom: 0;
+}
+
+.hero-top video {
+  object-fit: cover;
 }
 
 
@@ -2265,7 +2278,10 @@ h2.section-block__heading {
 
 .pool {
   /* min-height: 100vh; */
-  background: url("../img/night_pool.jpg") no-repeat center/cover;
+  /* background: url("../img/night_pool.jpg") no-repeat center/cover; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -4456,6 +4472,8 @@ h2.section-block__heading {
   .hero__box {
     padding-top: 120px;
     padding-bottom: 40px;
+    overflow-x: hidden;
+    background: linear-gradient(to right, var(--darkRed), var(--red));
   }
 
   .section__right {
@@ -4719,9 +4737,9 @@ h2.section-block__heading {
     background-color: rgba(255, 255, 255, .8);
   }
 
-  .hero__video {
+  /* .hero__video {
     background: url("/wp-content/themes/vertex/img/Background.jpg") no-repeat center/cover;
-  }
+  } */
 
   .hero__mp {
     display: none;
@@ -4758,6 +4776,7 @@ h2.section-block__heading {
 
   .address__mobile {
     display: block;
+    margin: 0 -16px;
   }
 
   .address__geo {
@@ -4923,6 +4942,7 @@ h2.section-block__heading {
 
   .header {
     min-height: 82px;
+    position: relative;
   }
 
   .header__address {
@@ -4999,12 +5019,18 @@ h2.section-block__heading {
   }
 
   .hero__box {
-    padding-top: 120px;
+    padding-top: 0;
     padding-bottom: 40px;
+    overflow-x: hidden;
+    background: linear-gradient(to right, var(--darkRed), var(--red));
+    min-height: fit-content;
+
   }
 
   .hero__reserved {
-    margin: 0 auto 40px auto;
+    /* margin: 0 auto 40px auto; */
+    margin: 0;
+    width: 100%;
   }
 
   .hero__medium {
@@ -5478,9 +5504,9 @@ h2.section-block__heading {
     display: none;
   }
 
-  .hero__video {
+  /* .hero__video {
     background: url("/wp-content/themes/vertex/img/Background.jpg") no-repeat center/cover;
-  }
+  } */
 
   .hero__mp {
     display: none;

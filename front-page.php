@@ -2,6 +2,8 @@
 get_header();
 
 $villa_off = get_field('villa_off');
+$pool_image = get_field('pool_image', 'options');
+$hero_mobile_image = get_field('hero_mobile_image', 'options');
 
 if (get_locale() == 'en_US') {
     ?>
@@ -13,29 +15,14 @@ if (get_locale() == 'en_US') {
         </div>
 
         <!-- Top Block -->
-        <div class="hero__video vinter">
+        <div class="hero__video vinter d-none d-md-block">
             <?php get_template_part('template-parts/hero', 'slider'); ?>
         </div>
 
-        <div class="container-fluid fluid1 hero__box d-flex flex-column justify-content-end">
-            <div class="row justify-content-between">
-                <div class="address__mobile"></div>
-
-                <!--a href="/en/booking-en/" class="gold-button hero__button col-auto">book a room</a>-->
+        <div class="container-fluid fluid1 hero__box d-flex flex-column justify-content-start justify-content-md-end">
+            <div class="address__mobile"
+                style="<?php if ($hero_mobile_image): ?>background-image: url(<?php echo $hero_mobile_image['url']; ?> ) <?php else: ?>background: #1C2540;<?php endif; ?>">
             </div>
-
-            <!-- <div class="hero__medium row justify-content-between">
-                <div
-                    class="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-9 col-12 row justify-content-between hero__logo logo">
-                    <a href="/" class="logo_img col-xl-7 col-6">
-                        <img src="/wp-content/themes/vertex/img/logo.svg" alt="Логотип Vertex" class="logo__logo">
-                    </a>
-
-                    <div class="col-xl-5 col-6">
-                        <h1 class="logo__descr">In the center of the resort infrastructure</h1>
-                    </div>
-                </div>
-            </div> -->
 
             <div class="row hero__reserve cols-auto align-items-end justify-content-between">
                 <div class="hero__icons col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-8 col-10">
@@ -126,9 +113,9 @@ if (get_locale() == 'en_US') {
         </div>
     </section>
 
-    <?php 
+    <?php
     get_template_part('template-parts/holiday', 'menu-en');
-    
+
     get_template_part('/template-parts/gallery'); ?>
     <!-- Скрываем блок Vertex: More than just a hotel 
     <section class="section more">
@@ -789,7 +776,7 @@ if (get_locale() == 'en_US') {
         </div>
     </section>
 Скрываем блок VIP SPA -->
-        <section id="pool_en" class="pool">
+        <section id="pool_en" class="pool" style="background-image: url( <?php echo $pool_image['url']; ?> )">
             <div class="pool__cont d-flex align-items-start justify-content-between">
                 <div class="row pool-box pool__box">
                     <h2 class="pool__heading">
@@ -1148,7 +1135,8 @@ if (get_locale() == 'en_US') {
                         <div id="map" class="contact__one"></div>
                     </div>
 
-                    <div class="contact__image col-lg-7 col-12" style="background-image:url( <?php echo get_field('booking-contacts-image_en')['url']; ?> );">
+                    <div class="contact__image col-lg-7 col-12"
+                        style="background-image:url( <?php echo get_field('booking-contacts-image_en')['url']; ?> );">
                         <div class="contact__block col-sm-9 col-11 position-relative">
                             <h2 class="contact__heading">
                                 Book your dream room today!
@@ -1176,27 +1164,12 @@ if (get_locale() == 'en_US') {
                 <?php get_template_part('template-parts/hero', 'slider'); ?>
             </div>
 
-            <div class="container-fluid fluid1 hero__box d-flex flex-column justify-content-end">
-                <div class="row justify-content-between">
-                    <div class="address__mobile"></div>
-
-                    <!--<a href="/booking/" class="gold-button hero__button col-auto">забронировать номер</a>-->
+            <div class="container-fluid fluid1 hero__box d-flex flex-column justify-content-start justify-content-md-end">
+                <div class="address__mobile"
+                    style="<?php if ($hero_mobile_image): ?>background-image: url(<?php echo $hero_mobile_image['url']; ?> ) <?php else: ?>background: #1C2540;<?php endif; ?>">
                 </div>
 
-                <!-- <div class="hero__medium row justify-content-between">
-                    <div
-                        class="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-9 col-12 row justify-content-between hero__logo logo">
-                        <a href="/" class="logo_img col-xl-7 col-6">
-                            <img src="/wp-content/themes/vertex/img/logo.svg" alt="Логотип Vertex" class="logo__logo">
-                        </a>
-
-                        <div class="col-xl-5 col-6">
-                            <h1 class="logo__descr">В&nbsp;центре курортной инфраструктуры</h1>
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="row hero__reserve cols-auto align-items-end justify-content-between">                    
+                <div class="row hero__reserve cols-auto align-items-end justify-content-between">
 
                     <div class="col-xxl-8 col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 hero__reserved">
                         <div id='block-search'>
@@ -1264,8 +1237,8 @@ if (get_locale() == 'en_US') {
             </div>
         </section>
 
-        <?php 
-        
+        <?php
+
         get_template_part('template-parts/holiday', 'menu');
 
         get_template_part('/template-parts/gallery'); ?>
@@ -1943,7 +1916,7 @@ if (get_locale() == 'en_US') {
         </div>
     </section>
 -->
-        <section id="pool" class="pool">
+        <section id="pool" class="pool" style="background-image: url( <?php echo $pool_image['url']; ?> )">
             <div class="pool__cont d-flex align-items-start justify-content-between">
                 <div class="row pool-box pool__box">
                     <h2 class="pool__heading">
@@ -2302,7 +2275,8 @@ if (get_locale() == 'en_US') {
                         <div id="map" class="contact__one"></div>
                     </div>
 
-                    <div class="contact__image col-lg-7 col-12" style="background-image:url( <?php echo get_field('booking-contacts-image')['url']; ?> );">
+                    <div class="contact__image col-lg-7 col-12"
+                        style="background-image:url( <?php echo get_field('booking-contacts-image')['url']; ?> );">
                         <div class="contact__block col-sm-9 col-11 position-relative">
                             <h2 class="contact__heading">
                                 Забронируйте номер вашей&nbsp;мечты уже&nbsp;сегодня!
@@ -2319,6 +2293,6 @@ if (get_locale() == 'en_US') {
 }
 ?>
 
-    <?php 
-    
+    <?php
+
     get_footer();
