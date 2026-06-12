@@ -862,7 +862,7 @@ if (get_locale() == 'en_US') {
 
                                 <?php if (get_field('rest_link_one_en')) { ?>
                                     <a href="<?php the_field('rest_link_one_en'); ?>"
-                                        class="gold-button restraunts__button">more
+                                        class="gold-button restraunts__button" target="blank">more
                                     </a>
                                 <?php } ?>
                             </div>
@@ -888,7 +888,7 @@ if (get_locale() == 'en_US') {
 
                                 <?php if (get_field('rest_link_two_en')) { ?>
                                     <a href="<?php the_field('rest_link_two_en'); ?>"
-                                        class="gold-button restraunts__button">more
+                                        class="gold-button restraunts__button" target="blank">more
                                     </a>
                                 <?php } ?>
                             </div>
@@ -2002,7 +2002,7 @@ if (get_locale() == 'en_US') {
 
                                 <?php if (get_field('rest_link_one')) { ?>
                                     <a href="<?php the_field('rest_link_one'); ?>"
-                                        class="gold-button restraunts__button">подробнее
+                                        class="gold-button restraunts__button" target="blank">подробнее
                                     </a>
                                 <?php } ?>
                             </div>
@@ -2028,7 +2028,7 @@ if (get_locale() == 'en_US') {
 
                                 <?php if (get_field('rest_link_two')) { ?>
                                     <a href="<?php the_field('rest_link_two'); ?>"
-                                        class="gold-button restraunts__button">подробнее
+                                        class="gold-button restraunts__button" target="blank">подробнее
                                     </a>
                                 <?php } ?>
                             </div>

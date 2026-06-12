@@ -233,6 +233,68 @@ jQuery(function($) {
 });
 
 window.addEventListener('DOMContentLoaded', function(){
+    // Бургерное меню
+
+  // Создаём плавность анимации появления мобильного меню
+  // Сначала объявим функцию FadeIn
+
+  const fadeIn = (el, timeout, display) => {
+    el.style.opacity = 0;
+    el.style.display = display || 'block';
+    el.style.transition = `opacity ${timeout}ms`;
+    setTimeout(() => {
+      el.style.opacity = 1;
+    }, 10);
+  }
+
+  // Объявим функцию FadeOut
+
+  const fadeOut = (el, timeout) => {
+    el.style.opacity = 1;
+    el.style.transition = `opacity ${timeout}ms`;
+    el.style.opacity = 0;
+
+    setTimeout(() => {
+      el.style.display = 'none';
+    }, timeout);
+  };
+
+  var menu = document.querySelector('.header__menu')
+      ,burger = document.querySelector('.burger')
+      ,burgerClose = document.querySelector('.burger.open')
+      ,flag = false;      
+
+    
+    burger.addEventListener('click', function(){ 
+      if(!flag) {
+        fadeIn(menu, 1000, 'flex');
+        flag = true;  
+      } else {
+        fadeOut(menu, 1000);
+        flag = false;
+      }       
+
+      burger.classList.toggle('open');
+
+      // Скрытие меню при нажатии на один из пунктов меню
+
+      document.querySelectorAll('.menu__link').forEach(function(oneItem){
+          oneItem.addEventListener('click', function(){          
+
+            fadeOut(menu, 1500);
+            flag = false;
+          
+            burger.classList.remove('open');
+          });
+      });
+
+      burgerClose.addEventListener('click', function(){
+        fadeOut(menu, 1500);
+        flag = false;
+      
+        burger.classList.remove('open');
+      });
+  }); 
 
   // Слайдер в блоке Hero
 
@@ -960,71 +1022,7 @@ window.addEventListener('DOMContentLoaded', function(){
         oneBtnAttr.classList.add('open');     
       });
     }); 
-  });
-
-
-  // Бургерное меню
-
-  // Создаём плавность анимации появления мобильного меню
-  // Сначала объявим функцию FadeIn
-
-  const fadeIn = (el, timeout, display) => {
-    el.style.opacity = 0;
-    el.style.display = display || 'block';
-    el.style.transition = `opacity ${timeout}ms`;
-    setTimeout(() => {
-      el.style.opacity = 1;
-    }, 10);
-  }
-
-  // Объявим функцию FadeOut
-
-  const fadeOut = (el, timeout) => {
-    el.style.opacity = 1;
-    el.style.transition = `opacity ${timeout}ms`;
-    el.style.opacity = 0;
-
-    setTimeout(() => {
-      el.style.display = 'none';
-    }, timeout);
-  };
-
-  var menu = document.querySelector('#menu')
-      ,burger = document.querySelector('#burger')
-      ,burgerClose = document.querySelector('#burger.open')
-      ,flag = false;
-
-    burger.addEventListener('click', function(){      
-      if(!flag) {
-        fadeIn(menu, 1000, 'flex');
-        flag = true;  
-      } else {
-        fadeOut(menu, 1000);
-        flag = false;
-      }       
-
-      burger.classList.toggle('open');
-
-      // Скрытие меню при нажатии на один из пунктов меню
-
-      document.querySelectorAll('.menu__link').forEach(function(oneItem){
-          oneItem.addEventListener('click', function(){          
-
-            fadeOut(menu, 1500);
-            flag = false;
-          
-            burger.classList.remove('open');
-          });
-      });
-
-      burgerClose.addEventListener('click', function(){
-        fadeOut(menu, 1500);
-        flag = false;
-      
-        burger.classList.remove('open');
-      });
-  }); 
-   
+  });   
 
   ymaps.ready(init);
   function init(){
@@ -1043,9 +1041,7 @@ window.addEventListener('DOMContentLoaded', function(){
     });
 
     myMap.geoObjects.add(myPlacemark);
-  }  
-  
-   
+  }   
 
 
 

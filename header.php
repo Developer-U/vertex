@@ -17,16 +17,14 @@
         type="text/javascript">
         </script>
 
-    <title>Vertex - отель в Красной Поляне - официальный сайт</title>
-
-    <?php wp_head(); ?>
+    <title>Vertex - отель в Красной Поляне - официальный сайт</title>    
 
     <!-- start TL head script -->
-    <script type='text/javascript'>
+    <script type='text/javascript'>  
+
         (function (w) {
             var lang = 'ru';
             if (window.location.pathname.indexOf('/en/') !== -1) lang = 'en';
-            console.log(lang);
             var q = [
                 ['setContext', 'TL-INT-vertexhotel', lang],
                 ['embed', 'search-form', {
@@ -51,6 +49,8 @@
         })(window);
     </script>
     <!-- end TL head script -->
+
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -141,6 +141,10 @@
                                 <li class="menu__item col-auto">
                                     <a href="<?php echo $link_hash; ?>#contacts"
                                         class="menu__link <?php echo $link_slide; ?>">контакты</a>
+                                </li>
+
+                                <li class="menu__item col-auto">
+                                    <a href="/documents" class="menu__link">документы</a>
                                 </li>
                             </ul>
                         </nav>
